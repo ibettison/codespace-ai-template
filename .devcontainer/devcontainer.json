@@ -1,0 +1,27 @@
+{
+  "name": "Codespace AI Development Environment",
+  "description": "Reusable Codespaces AI development environment",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "github/codespaces-features": {
+      "node": "20",
+      "python": "3"
+    }
+  },
+  "postStartCommand": "bash /workspaces/codespace-ai-template/.devcontainer/setup.sh",
+  "postCreateCommand": "bash /workspaces/codespace-ai-template/.devcontainer/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.vscode-github-actions",
+        "ms-python.python",
+        "ms-nodejs.node-debug2",
+        "msjsdiag.debugger-for-chrome",
+        "openai.devonhouse"
+      ]
+    }
+  },
+  "tooling": {
+    "postCreateCommand": "bash /workspaces/codespace-ai-template/.devcontainer/setup.sh"
+  }
+}
